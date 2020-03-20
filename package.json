@@ -1,0 +1,46 @@
+{
+  "name": "node-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "watch": "concurrently \"yarn watch-ts\" \"yarn watch-node\"",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.7.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@types/express": "^4.17.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
