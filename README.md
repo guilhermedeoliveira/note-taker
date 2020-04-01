@@ -1,2 +1,3 @@
-# Node dashboard
-This is a project for testing some node related technologies
+# Node taker
+
+This is a project for testing some technologies
