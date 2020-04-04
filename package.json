@@ -32,6 +32,15 @@
       "pre-commit": "lint-staged"
     }
   },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ],
+    "transform": {
+      "^.+\\.(graphql|gql)$": "jest-transform-graphql",
+      "^.+\\.[jt]sx?$": "babel-jest"
+    }
+  },
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.41",
     "@graphql-modules/core": "^0.7.14",
@@ -44,16 +53,21 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.3.0",
+    "@types/jest": "^25.2.1",
     "@types/micro-cors": "^0.1.0",
     "@types/node": "^13.9.8",
     "@types/react": "^16.9.31",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
+    "babel-jest": "^25.2.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "husky": ">=4",
+    "jest": "^25.2.7",
+    "jest-transform-graphql": "^2.1.0",
     "lint-staged": ">=10",
     "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
