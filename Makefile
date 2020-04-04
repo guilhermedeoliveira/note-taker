@@ -1,14 +1,17 @@
 SHELL := /bin/bash # Use bash syntax
 
-run:
-	docker-compose run --service-ports --rm web
+up:
+	docker-compose up -d
 
-stop:
-	docker-compose stop
+in:
+	docker exec -it $(shell docker-compose ps | grep apoie-o-local_db | cut -d" " -f 1) /bin/bash
+
+down:
+	docker-compose down
 
 clean:
 	docker-compose down
-	docker rmi node-dashboard
+	docker rmi apoie-o-local
 
 build:
 	docker-compose build
