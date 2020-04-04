@@ -1,5 +1,6 @@
 node_modules
-local_modules
+dist
+src/_generated
 temp/
 .vscode
 .eslintcache

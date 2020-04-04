@@ -1,9 +1,3 @@
 node_modules
-local_modules
-temp
 .next
-coverage
-showcase
-storybook-static/
-temp/
-static/*.js
+src/_generated
