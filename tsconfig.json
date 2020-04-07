@@ -29,7 +29,12 @@
       "~root/*": ["*"],
       "~app/*": ["./src/*"],
       "~api/*": ["./src/api/*"],
-      "~graphql": ["./src/lib/graphql"]
+      "~lib/*": ["./src/lib/*"],
+      "~graphql": ["./src/lib/graphql"],
+      "~generated/*": ["./src/_generated/*"],
+      "~design": ["./src/design/index.ts"],
+      "~design/*": ["./src/design/*"],
+      "~components/*": ["./src/components/*"]
     }
   },
   "exclude": ["node_modules"],
