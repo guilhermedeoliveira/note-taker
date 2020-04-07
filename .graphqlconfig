@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "note-taker": {
+      "schemaPath": "src/_generated/schema.graphql"
+    }
+  }
+}
