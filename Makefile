@@ -16,4 +16,10 @@ clean:
 build:
 	docker-compose build
 
+ci-setup:
+  ./scripts/ci-setup.sh
+
+ci-qa:
+  ./scripts/ci-qa.sh
+
 default: run
