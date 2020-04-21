@@ -1,3 +1,5 @@
-node_modules
-.next
 src/_generated
+.next
+node_modules
+next.config.*.js
+next.config.js

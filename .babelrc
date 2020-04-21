@@ -11,7 +11,7 @@
           "~lib": "./src/lib",
           "~graphql": "./src/lib/graphql",
           "~generated": "./src/_generated",
-          "~design": "./src/design",
+          "~styleguide": "./src/styleguide",
           "~components": "./src/components"
         }
       }

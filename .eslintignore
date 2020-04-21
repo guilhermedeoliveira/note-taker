@@ -1,6 +1,6 @@
 node_modules
 dist
 src/_generated
+migrations/
 temp/
-.vscode
-.eslintcache
+next-env.d.ts

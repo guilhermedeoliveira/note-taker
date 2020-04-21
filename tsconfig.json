@@ -32,8 +32,8 @@
       "~lib/*": ["./src/lib/*"],
       "~graphql": ["./src/lib/graphql"],
       "~generated/*": ["./src/_generated/*"],
-      "~design": ["./src/design/index.ts"],
-      "~design/*": ["./src/design/*"],
+      "~styleguide": ["src/styleguide/index.ts"],
+      "~styleguide/*": ["src/styleguide/*"],
       "~components/*": ["./src/components/*"]
     }
   },
