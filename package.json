@@ -43,6 +43,9 @@
   },
   "dependencies": {
     "@apollo/client": "^3.0.0-beta.41",
+    "@chakra-ui/core": "^0.7.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@graphql-modules/core": "^0.7.15",
     "@graphql-modules/di": "^0.7.15",
     "apollo-datasource": "^0.7.0",
@@ -50,6 +53,7 @@
     "apollo-server-micro": "^2.11.0",
     "datasource-sql": "^1.1.1",
     "dotenv": "^8.2.0",
+    "emotion-theming": "^10.0.27",
     "micro-cors": "^0.1.1",
     "mysql": "^2.18.1",
     "next": "^9.3.4",
@@ -58,6 +62,7 @@
     "ramda": "^0.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "styled-tools": "^1.7.1",
     "tsdef": "^0.0.13"
   },
   "devDependencies": {
@@ -96,6 +101,7 @@
     "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "waait": "^1.0.5"
   }
 }
