@@ -1,6 +1,6 @@
 overwrite: true
-schema: './src/api/**/*.graphql'
-documents: './src/**/*.gql'
+schema: "./src/api/**/*.graphql"
+documents: "./src/**/*.gql"
 generates:
   ./src/_generated/types.ts:
     plugins:
@@ -8,7 +8,6 @@ generates:
       - typescript-resolvers
       - typescript-operations
     config:
-      defaultMapper: "any"
       contextType: @graphql-modules/core#ModuleContext
 
   ./src/_generated/schema.graphql:
