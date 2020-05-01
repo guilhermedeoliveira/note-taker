@@ -8,8 +8,7 @@ generates:
       - typescript-resolvers
       - typescript-operations
     config:
-      nonOptionalTypename: true
-      defaultMapper: 'any'
+      defaultMapper: "any"
       contextType: @graphql-modules/core#ModuleContext
 
   ./src/_generated/schema.graphql:
