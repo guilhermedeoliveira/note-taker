@@ -12,5 +12,7 @@ input UserInput {
 
 type User {
   id: ID!
-  name: String!
+  firstName: String!
+  lastName: String!
+  fullName: String
 }

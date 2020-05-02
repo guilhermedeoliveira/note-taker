@@ -4,20 +4,24 @@ import typeDefs from "./user.graphql";
 // import { DatabaseDataSource, DatabaseProvider } from '~api/database'
 
 const Query: GT.QueryResolvers = {
-  users: () => [],
+  users: () => [{ id: "01", firstName: "a", lastName: "a" }],
 };
 
 const Mutation: GT.MutationResolvers = {
-  createUser: () => {},
+  createUser: () => ({
+    id: "02",
+    firstName: "Guilherme",
+    lastName: "Oliveira",
+  }),
 };
 
-// const User: GT.UserResolvers = {
-//   __resolveType: () => "User",
-// };
+const User: GT.UserResolvers = {
+  fullName: () => "a",
+};
 
 const UserModule = new GraphQLModule({
   typeDefs,
-  resolvers: { Query, Mutation /* User */ },
+  resolvers: { Query, Mutation, User },
   // providers: [DatabaseProvider]
 });
 
