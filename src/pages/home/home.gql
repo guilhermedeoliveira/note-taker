@@ -1,6 +1,6 @@
 query HomePage {
   users {
     id
-    name
+    fullName
   }
 }
