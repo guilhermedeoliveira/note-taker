@@ -17,9 +17,9 @@ build:
 	docker-compose build
 
 ci-setup:
-  ./scripts/ci-setup.sh
+	./scripts/ci-setup.sh
 
 ci-qa:
-  ./scripts/ci-qa.sh
+	./scripts/ci-qa.sh
 
 default: run
