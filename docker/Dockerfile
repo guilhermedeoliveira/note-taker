@@ -1,40 +1,18 @@
-FROM node:10
-RUN apt-get update -y               \
-    && apt-get install -y           \
-    curl                            \
-    git                             \
-    nginx                           \
-    gzip                            \
-    htop                            \
-    nano                            \
-    netcat                          \
-    rsync                           \
-    sudo                            \
-    ssh                             \
-    tig                             \
-    unzip                           \
-    vim                             \
-    wget                            \
-    zip                             \
-    --no-install-recommends         \
-    && apt-get clean                \
-    && rm -rf /var/lib/apt/lists/*  \
-    && rm -rf /tmp/*                \
-    && rm -rf /var/tmp/*
+FROM node:13
 
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+ENV PORT 3000
 
-RUN sudo chown node:node /${HOME}/.bashrc
-RUN sudo chown node:node /var/log/nginx/error.log
-RUN sudo chown node:node /var/log/nginx/access.log
-RUN echo "export NVM_DIR=$HOME/.nvm" >> ${HOME}/.bashrc
-RUN sudo usermod -aG sudo node \
-    && echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-COPY ./entrypoint.sh /etc/entrypoint.sh
-RUN sudo chmod +x /etc/entrypoint.sh
+# Copying wait-for-it script
+COPY . ./wait-for-it.sh
 
-WORKDIR /home/node/app
-USER node
+# Building app
+EXPOSE 3000
+
+RUN apt-get update -y && apt-get install -y telnet
+
+# Running the app
 CMD ["/bin/bash"]
-ENTRYPOINT ["/etc/entrypoint.sh"]

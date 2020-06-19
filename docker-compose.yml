@@ -7,21 +7,24 @@ services:
     expose:
       - "5432"
     restart: always
-    environment:
-      POSTGRES_DATABASE: "${DB_NAME}"
-      POSTGRES_USER: "${DB_USER}"
-      POSTGRES_PASSWORD: "${DB_PASSWORD}"
     env_file:
       - .env
     volumes:
       - db:/var/lib/postgresql/data
   app:
     build: ./docker
-    command: npm dev
     ports:
-      - "3000:3000"
+      - 3000:3000
     depends_on:
-      - "db"
+      - db
+    env_file:
+      - .env
+    environment:
+      DB_HOST: db
+    volumes:
+      - $HOME/.ssh:/usr/src/app/.ssh
+      - $HOME/.gitconfig:/usr/src/app/.gitconfig
+      - $PWD:/usr/src/app
 
 volumes:
   db:
