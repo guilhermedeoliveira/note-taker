@@ -54,7 +54,7 @@
     "datasource-sql": "^1.1.1",
     "dotenv": "^8.2.0",
     "emotion-theming": "^10.0.27",
-    "knex": "^0.21.1",
+    "knex": "^2.4.0",
     "micro-cors": "^0.1.1",
     "mysql": "^2.18.1",
     "next": "^9.3.4",
